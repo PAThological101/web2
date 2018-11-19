@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <style media="screen">
+
+      body {
+        background-image: radial-gradient(blue, lightblue);
+      }
+
+      .hcpform {
+        float: right;
+      }
+
+      .patientform{
+        float: left;
+      }
+
+      .doctor img {
+      height: 12%;
+      width: 12%
+      }
+
+      .patient img {
+        height: 25%;
+        width: 25%;
+      }
+
+    </style>
+  </head>
+  <body>
+
+<h1>Energon</h1>
+<div class="doctor" style="border-style: solid">
+  <img src="images/doctor.jpg" alt="doctor image">
+<form class="hcpform" action="index.html" method="post">
+
+<fieldset style="width: 200px;">
+<legend>Healthcare Professional Login</legend>
+
+<p>Role:
+<select class="hcp" name="hcptype">
+  <option value="physician">Physician</option>
+  <option value="nurse">Nurse</option>
+  <option value="pharmacist">Pharmacist</option>
+</select>
+</p>
+
+<p>Province/Territory:
+<select class="hcp" name="province">
+  <option value="ont">Ontario</option>
+  <option value="bc">British Columbia</option>
+  <option value="qc">Quebec</option>
+  <option value="al">Alberta</option>
+  <option value="man">Manitoba</option>
+  <option value="nb">New Brunswick</option>
+  <option value="nfl">Newfoundland & Labrador</option>
+  <option value="ns">Nova Scotia</option>
+  <option value="nunavut">Nunavut</option>
+  <option value="pei">Prince Edward Island</option>
+  <option value="sask">Saskatchewan</option>
+  <option value="yukon">Yukon</option>
+  <option value="NWT">Northwest Territories</option>
+</select>
+</p>
+
+<p>Licence Number:
+<input type="text" name="licence" size="10" />
+</p>
+
+<button onclick="window.location.href='hcp.html'" type="button" name="hcpbutton">Submit</button>
+
+</fieldset>
+</form>
+</div>
+
+<br>
+<br>
+
+<div class="patient" style="border-style: solid;">
+  <img src="images/patient.jpg" alt="image of patient">
+<form class="patientform" action="index.html" method="post">
+
+<fieldset style="width: 120px;">
+
+<!--    Invalid Licence Number   -->
+
+
+
+  <legend>Patients</legend>
+  <p>Enter your medication's Drug Identification Number (DIN):
+  <input type="text" name="din" size="10" />
+  </p>
+
+<p>What is a DIN?</p>
+<!-- do a modal showing what a din is-->
+<button type="button" name="ptbutton">Submit</button>
+
+</fieldset>
+
+</form>
+</div>
+
+<footer>
+
+</footer>
+
+  </body>
+</html>
